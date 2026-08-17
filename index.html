@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Mystery Master — AI Lateral-Thinking Puzzles</title>
+<meta name="description" content="Solve lateral-thinking mysteries by asking an AI narrator yes/no questions. Single player, online and local multiplayer." />
+<meta property="og:title" content="Mystery Master" />
+<meta property="og:description" content="Pick a mystery. Ask questions. Uncover the truth." />
+<style>
+  :root {
+    --bg: #0a0a0f;
+    --card: #14141b;
+    --border: rgba(220,38,38,0.22);
+    --text: #e8e8ea;
+    --muted: #9a9aa4;
+    --primary: #dc2626;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    background: radial-gradient(1200px 500px at 50% -100px, rgba(220,38,38,0.12), transparent), var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 860px; margin: 0 auto; padding: 48px 20px 80px; }
+  .toggle { position: absolute; top: 20px; right: 20px; display: inline-flex; gap: 4px; border: 1px solid var(--border); border-radius: 999px; padding: 4px; }
+  .toggle button { background: none; border: none; color: var(--muted); cursor: pointer; font-size: 12px; font-weight: 600; padding: 5px 13px; border-radius: 999px; }
+  .toggle button.active { background: var(--primary); color: #fff; }
+  .hero { text-align: center; margin-bottom: 56px; }
+  .logo {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 84px; height: 84px; border-radius: 999px;
+    border: 1px solid var(--border); background: rgba(220,38,38,0.08);
+    font-size: 40px; margin-bottom: 22px;
+    box-shadow: 0 0 50px rgba(220,38,38,0.25);
+  }
+  h1 { font-size: 42px; margin: 0 0 10px; letter-spacing: 1px; }
+  .tagline { color: var(--muted); font-size: 18px; max-width: 520px; margin: 0 auto; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin-top: 8px; }
+  .card { background: var(--card); border: 1px solid rgba(255,255,255,0.06); border-radius: 16px; padding: 22px; }
+  .card .ic { font-size: 26px; }
+  .card h3 { font-size: 17px; margin: 12px 0 6px; }
+  .card p { margin: 0; color: #c9c9d0; font-size: 14px; }
+  .section-title { text-align: center; color: var(--primary); text-transform: uppercase; letter-spacing: 2px; font-size: 14px; margin: 56px 0 20px; }
+  .steps { display: grid; gap: 12px; max-width: 560px; margin: 0 auto; }
+  .step { display: flex; gap: 14px; align-items: flex-start; background: var(--card); border: 1px solid rgba(255,255,255,0.06); border-radius: 14px; padding: 16px 18px; }
+  .step .n { flex: none; width: 30px; height: 30px; border-radius: 999px; background: rgba(220,38,38,0.15); border: 1px solid var(--border); color: var(--primary); font-weight: 700; display: flex; align-items: center; justify-content: center; font-size: 14px; }
+  .step p { margin: 0; }
+  .step p b { color: var(--text); }
+  footer { text-align: center; color: var(--muted); font-size: 12px; margin-top: 64px; }
+  footer a { color: var(--primary); }
+  [data-lang="en"] .it, [data-lang="it"] .en { display: none; }
+</style>
+</head>
+<body>
+  <div class="toggle" role="group" aria-label="Language">
+    <button id="btn-en" class="active" onclick="setLang('en')">EN</button>
+    <button id="btn-it" onclick="setLang('it')">IT</button>
+  </div>
+
+  <div class="wrap">
+    <div class="hero">
+      <div class="logo">🔍</div>
+      <h1>Mystery Master</h1>
+      <p class="tagline">
+        <span class="en">Pick a mystery. Ask questions. Uncover the truth — with an AI narrator that answers only Yes, No or Irrelevant.</span>
+        <span class="it">Scegli un enigma. Poni domande. Svela la verità — con un narratore IA che risponde solo Sì, No o Irrilevante.</span>
+      </p>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <div class="ic">🧩</div>
+        <h3><span class="en">Lateral-thinking mysteries</span><span class="it">Enigmi laterali</span></h3>
+        <p><span class="en">Dozens of hand-crafted cases across horror, classic whodunit and surreal genres, in three difficulty tiers.</span><span class="it">Decine di casi originali tra horror, giallo classico e surreale, su tre livelli di difficoltà.</span></p>
+      </div>
+      <div class="card">
+        <div class="ic">🤖</div>
+        <h3><span class="en">AI narrator</span><span class="it">Narratore IA</span></h3>
+        <p><span class="en">Ask any yes/no question and get instant answers. Stuck? Spend a hint for a nudge in the right direction.</span><span class="it">Fai qualsiasi domanda sì/no e ricevi risposte immediate. Bloccato? Usa un indizio per un piccolo aiuto.</span></p>
+      </div>
+      <div class="card">
+        <div class="ic">👥</div>
+        <h3><span class="en">Play together</span><span class="it">Gioca in compagnia</span></h3>
+        <p><span class="en">Solo with saved progress, online rooms via code or QR, or local pass-and-play for 2–6 players. Online play has community rules, plus reporting and blocking.</span><span class="it">Da solo con progressi salvati, stanze online con codice o QR, o multiplayer locale per 2–6 giocatori. Il gioco online ha regole della community, con segnalazione e blocco.</span></p>
+      </div>
+      <div class="card">
+        <div class="ic">🏆</div>
+        <h3><span class="en">Compete</span><span class="it">Competi</span></h3>
+        <p><span class="en">Earn credits and badges, then measure yourself against the global leaderboard or just against your friends.</span><span class="it">Guadagna crediti e medaglie, poi confrontati con la classifica globale o solo con i tuoi amici.</span></p>
+      </div>
+    </div>
+
+    <div class="section-title"><span class="en">How it works</span><span class="it">Come funziona</span></div>
+    <div class="steps">
+      <div class="step"><span class="n">1</span><p><b><span class="en">Read the case.</span><span class="it">Leggi il caso.</span></b> <span class="en">Every mystery opens with a short premise holding all the clues you need.</span><span class="it">Ogni mistero inizia con una breve premessa che contiene tutti gli indizi.</span></p></div>
+      <div class="step"><span class="n">2</span><p><b><span class="en">Ask questions.</span><span class="it">Poni domande.</span></b> <span class="en">The narrator replies only Yes, No or Irrelevant. Narrow it down, one clue at a time.</span><span class="it">Il narratore risponde solo Sì, No o Irrilevante. Restringi il campo un indizio alla volta.</span></p></div>
+      <div class="step"><span class="n">3</span><p><b><span class="en">Solve it.</span><span class="it">Risolvi.</span></b> <span class="en">When you think you've cracked it, submit your theory. Guess the truth and the case is closed.</span><span class="it">Quando pensi di averci capito, proponi la tua teoria. Indovina la verità e il caso è chiuso.</span></p></div>
+    </div>
+
+    <footer>
+      © 2026 Mattia Centrella ·
+      <a href="privacy.html"><span class="en">Privacy Policy</span><span class="it">Privacy</span></a> ·
+      <a href="support.html"><span class="en">Support</span><span class="it">Supporto</span></a> ·
+      <a href="mailto:darkenigma.management@gmail.com">darkenigma.management@gmail.com</a>
+    </footer>
+  </div>
+
+  <script>
+    function setLang(l) {
+      document.documentElement.setAttribute('data-lang', l);
+      document.documentElement.setAttribute('lang', l);
+      document.getElementById('btn-en').classList.toggle('active', l === 'en');
+      document.getElementById('btn-it').classList.toggle('active', l === 'it');
+    }
+    if ((navigator.language || '').toLowerCase().startsWith('it')) setLang('it');
+  </script>
+</body>
+</html>

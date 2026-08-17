@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Support — Mystery Master</title>
+<meta name="description" content="Support and help for Mystery Master." />
+<style>
+  :root {
+    --bg: #0a0a0f;
+    --card: #14141b;
+    --border: rgba(220,38,38,0.22);
+    --text: #e8e8ea;
+    --muted: #9a9aa4;
+    --primary: #dc2626;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 40px 20px 80px; }
+  header { text-align: center; margin-bottom: 32px; }
+  .logo {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 64px; height: 64px; border-radius: 999px;
+    border: 1px solid var(--border); background: rgba(220,38,38,0.08);
+    font-size: 30px; margin-bottom: 16px;
+  }
+  h1 { font-size: 28px; margin: 0 0 4px; letter-spacing: .5px; }
+  .sub { color: var(--muted); font-size: 14px; }
+  .toggle { display: inline-flex; gap: 4px; margin: 20px 0 0; border: 1px solid var(--border); border-radius: 999px; padding: 4px; }
+  .toggle button {
+    background: none; border: none; color: var(--muted); cursor: pointer;
+    font-size: 13px; font-weight: 600; padding: 6px 16px; border-radius: 999px;
+  }
+  .toggle button.active { background: var(--primary); color: #fff; }
+  section { background: var(--card); border: 1px solid rgba(255,255,255,0.06); border-radius: 14px; padding: 20px 22px; margin-top: 16px; }
+  h2 { font-size: 16px; color: var(--primary); margin: 0 0 8px; text-transform: uppercase; letter-spacing: 1px; }
+  p { margin: 0 0 10px; color: #c9c9d0; }
+  p:last-child { margin-bottom: 0; }
+  a { color: var(--primary); }
+  .cta {
+    display: inline-block; margin-top: 6px; background: var(--primary); color: #fff;
+    text-decoration: none; font-weight: 600; padding: 12px 24px; border-radius: 999px;
+  }
+  .faq q-title { font-weight: 600; color: var(--text); display: block; margin-bottom: 2px; }
+  .q { font-weight: 600; color: var(--text); }
+  footer { text-align: center; color: var(--muted); font-size: 12px; margin-top: 40px; }
+  [data-lang="en"] .it, [data-lang="it"] .en { display: none; }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="logo">🔍</div>
+      <h1>Mystery Master</h1>
+      <p class="sub"><span class="en">Support &amp; Help</span><span class="it">Supporto &amp; Assistenza</span></p>
+      <div class="toggle" role="group" aria-label="Language">
+        <button id="btn-en" class="active" onclick="setLang('en')">English</button>
+        <button id="btn-it" onclick="setLang('it')">Italiano</button>
+      </div>
+    </header>
+
+    <section>
+      <h2><span class="en">Contact us</span><span class="it">Contattaci</span></h2>
+      <p>
+        <span class="en">Questions, bugs or feedback? Email us and, where you can, mention your device model, your iOS version and what you were doing when the problem happened — it lets us fix things on the first try. We normally reply within 2 business days.</span>
+        <span class="it">Domande, bug o suggerimenti? Scrivici e, se puoi, indica il modello del dispositivo, la versione di iOS e cosa stavi facendo quando si è verificato il problema: ci permette di risolvere al primo colpo. Rispondiamo di norma entro 2 giorni lavorativi.</span>
+      </p>
+      <a class="cta" href="mailto:darkenigma.management@gmail.com?subject=Mystery%20Master%20support">darkenigma.management@gmail.com</a>
+    </section>
+
+    <section class="faq">
+      <h2><span class="en">Frequently asked questions</span><span class="it">Domande frequenti</span></h2>
+
+      <p><span class="q"><span class="en">How do I play?</span><span class="it">Come si gioca?</span></span></p>
+      <p>
+        <span class="en">Pick a mystery, then ask the AI narrator yes/no questions. It answers only Yes, No or Irrelevant. Narrow down the clues, then submit your theory to solve the case.</span>
+        <span class="it">Scegli un mistero, poi poni domande sì/no al narratore IA. Risponde solo Sì, No o Irrilevante. Restringi gli indizi, poi proponi la tua teoria per risolvere il caso.</span>
+      </p>
+
+      <p><span class="q"><span class="en">How do I sign in? Do I need an account?</span><span class="it">Come si accede? Serve un account?</span></span></p>
+      <p>
+        <span class="en">You sign in with Google or with Apple only: there is no Mystery Master password, so there is nothing to remember or reset. The account keeps your progress, credits and leaderboard position in sync across your devices.</span>
+        <span class="it">L'accesso avviene solo con Google o con Apple: non esiste una password di Mystery Master, quindi non c'è nulla da ricordare o da recuperare. L'account mantiene allineati progressi, crediti e posizione in classifica su tutti i tuoi dispositivi.</span>
+      </p>
+
+      <p><span class="q"><span class="en">What are credits?</span><span class="it">Cosa sono i crediti?</span></span></p>
+      <p>
+        <span class="en">Credits unlock hints and certain stories. You get a starting balance when you create your account and earn more as you play. The app offers no purchases at all: credits never cost real money.</span>
+        <span class="it">I crediti sbloccano indizi e alcune storie. Ricevi un saldo iniziale alla creazione dell'account e ne guadagni proseguendo nel gioco. Nell'app non è previsto alcun acquisto: i crediti non costano denaro reale.</span>
+      </p>
+
+      <p><span class="q"><span class="en">How do I report or block another player?</span><span class="it">Come segnalo o blocco un altro giocatore?</span></span></p>
+      <p>
+        <span class="en">In online games, tap the small report icon next to the name of whoever wrote a message and choose "Report" or "Report and block". Reports reach the moderation team and anyone you block disappears from your chat. Offensive, harassing or inappropriate content is not tolerated and leads to account removal; we review every report within 24 hours.</span>
+        <span class="it">Nelle partite online tocca la piccola icona di segnalazione accanto al nome di chi ha scritto un messaggio e scegli «Segnala» oppure «Segnala e blocca». Le segnalazioni arrivano al team di moderazione e chi blocchi non ti comparirà più nella chat. Contenuti offensivi, molesti o inappropriati non sono tollerati e comportano la rimozione dell'account; esaminiamo ogni segnalazione entro 24 ore.</span>
+      </p>
+
+      <p><span class="q"><span class="en">Can I play with other people?</span><span class="it">Posso giocare con altre persone?</span></span></p>
+      <p>
+        <span class="en">Yes, in two ways. In online multiplayer you create a room and share a code or a QR: friends join from their own devices and you take turns, seeing everyone's questions. In local multiplayer, 2 to 6 players take turns on the same phone — guests don't need an account.</span>
+        <span class="it">Sì, in due modi. In multigiocatore online crei una stanza e condividi un codice o un QR: gli amici entrano dai loro dispositivi e giocate a turni, vedendo le domande di tutti. In multigiocatore locale, da 2 a 6 giocatori si alternano sullo stesso telefono: agli ospiti non serve un account.</span>
+      </p>
+
+      <p><span class="q"><span class="en">How do I delete my account?</span><span class="it">Come elimino l'account?</span></span></p>
+      <p>
+        <span class="en">Open your Profile, scroll to the Account section and tap "Delete account", then type DELETE to confirm. This permanently removes your account and all associated data. The same screen also offers "Export my data" if you want a copy first. You can also request deletion by writing to <a href="mailto:darkenigma.management@gmail.com">darkenigma.management@gmail.com</a> from your account's address.</span>
+        <span class="it">Apri il tuo Profilo, scorri fino alla sezione Account e tocca «Elimina account», poi digita ELIMINA per conferma. L'operazione rimuove definitivamente il tuo account e tutti i dati associati. Nella stessa schermata trovi anche «Esporta i miei dati» se prima vuoi scaricarne una copia. Puoi anche chiedere la cancellazione scrivendo a <a href="mailto:darkenigma.management@gmail.com">darkenigma.management@gmail.com</a> dall'indirizzo del tuo account.</span>
+      </p>
+
+      <p><span class="q"><span class="en">The AI gave me an answer that looks wrong.</span><span class="it">L'intelligenza artificiale mi ha dato una risposta che sembra sbagliata.</span></span></p>
+      <p>
+        <span class="en">It happens: the AI interprets an ambiguous question in whatever way seems most reasonable to it. Try rephrasing it more specifically, as a closed question. If an answer looks clearly wrong, tell us which mystery and the exact question — we use those reports to improve the game.</span>
+        <span class="it">Può succedere: l'IA interpreta una domanda ambigua nel modo che le sembra più sensato. Prova a riformularla in modo più specifico e chiuso. Se una risposta ti sembra chiaramente errata, segnalacela indicando il mistero e la domanda esatta: le usiamo per migliorare il gioco.</span>
+      </p>
+    </section>
+
+    <section>
+      <h2><span class="en">Quick how-tos</span><span class="it">Operazioni rapide</span></h2>
+      <p>
+        <span class="q"><span class="en">Export your data</span><span class="it">Esportare i propri dati</span></span><br />
+        <span class="en">Profile → Account → "Export my data". Downloads a JSON file with everything we hold about you.</span>
+        <span class="it">Profilo → Account → «Esporta i miei dati». Scarica un file JSON con tutto ciò che ti riguarda.</span>
+      </p>
+      <p>
+        <span class="q"><span class="en">Change language</span><span class="it">Cambiare lingua</span></span><br />
+        <span class="en">Settings → Language. The app is available in Italian and English, mysteries included.</span>
+        <span class="it">Impostazioni → Lingua. L'app è disponibile in italiano e in inglese, misteri compresi.</span>
+      </p>
+      <p>
+        <span class="q"><span class="en">Turn off sound and vibration</span><span class="it">Disattivare audio e vibrazione</span></span><br />
+        <span class="en">Settings → Audio, and Settings → Haptic feedback.</span>
+        <span class="it">Impostazioni → Audio e Impostazioni → Feedback aptico.</span>
+      </p>
+    </section>
+
+    <footer>© 2026 Mattia Centrella · <a href="privacy.html">Privacy Policy</a> · <a href="index.html">Home</a></footer>
+  </div>
+
+  <script>
+    function setLang(l) {
+      document.documentElement.setAttribute('data-lang', l);
+      document.documentElement.setAttribute('lang', l);
+      document.getElementById('btn-en').classList.toggle('active', l === 'en');
+      document.getElementById('btn-it').classList.toggle('active', l === 'it');
+    }
+    if ((navigator.language || '').toLowerCase().startsWith('it')) setLang('it');
+  </script>
+</body>
+</html>
